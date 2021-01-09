@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="javascript.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+<script>
+    var chart1 = null;
+    var chart3 = null;
+</script>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Github Visualiser </title>
+    <style>
+        .background {
+            background-color: lightblue;
+        }
+        .chart {
+            background-color: lightblue;    
+            text-align: center;
+        }
+        .info {
+            background-color: lightblue;    
+            text-align: left;
+        }
+        .inputbox {
+            background-color:  rgb(2, 157, 247);    
+            text-align: left;
+        }
+
+        </style>
+</head>
+
+<body>
+    <div class="background">
+        <div class="inputbox">
+                user: <input id="user" type="text" />
+                token: <input id="token" type="text" />
+                <button onclick="input()">Submit </button>
+        </div>
+        <div class="info">
+            <img class="info" id="img" src=''>
+                    <p id="login"></p>
+                    <p id="name"></p> 
+                    <p id="link"></p>
+                    <p id="created_at"></p>
+                    <p id="public_repos"></p>
+                    <p id="followers"></p>
+                    <p id="following"></p>
+        </div>
+        <div class="chart">
+            <div id="pie" title="Languages by Number of Bytes"></div>
+        </div>
+        <div class="chart">
+            <canvas id="polarchart"></div>
+        </div>
+        <div class="chart">
+            <canvas id="repochart"></canvas>
+        </div>
+    </div>
+</body>
+
+</html>
