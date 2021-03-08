@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dublin Party Hire</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="" />
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
+    <!-- //Fonts -->
+    <script>
+        /* this function checks that the name has valid characters and that the max quantity
+         contains only numbers. It is called when the form attempts to submit.
+          Modified version of code found here: https://www.geeksforgeeks.org/form-validation-using-html-javascript/ */
+        function VALIDATION() {
+            var name =
+                document.forms["employee_form"]["emp_name"];
+            var phone =
+                document.forms["employee_form"]["emp_phone"];
+            var email =
+                document.forms["employee_form"]["emp_email"];
+
+            if (name.value == "") {
+                alert("Please enter employee name.");
+
+                return false;
+            } else if (/[^a-zA-Z ]/i.test(name.value)) {
+                alert("Please use letters A-Z only");
+
+                return false;
+            }
+            if (phone.value == "") {
+                alert("Please enter a phone number.");
+
+                return false;
+            } else if (/[^0-9]/i.test(phone.value)) {
+                alert("Please use the correct phone number format.");
+
+                return false;
+            }
+            if (email.value == "") {
+                alert("Please enter an email address.");
+
+                return false;
+            }
+
+
+
+            return true;
+        } 
+    </script>
+    <style>
+        body {
+            border: 1px solid black;
+        }
+
+        table th {
+            text-align: left;
+            background-color: cadetblue;
+            color: white;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPH Employee Form</title>
+</head>
+
+<body>
+    <div class="main-sec inner-page">
+        <header class="py-sm-3 pt-3 pb-2" id="home">
+            <div class="container">
+                <!-- nav -->
+                <div class="top-w3pvt d-flex">
+                    <div id="logo">
+                        <h1> <a href="index.php"><span class="log-w3pvt">Dublin Party Hire</span> </a> <label
+                                class="sub-des">Online Store</label></h1>
+                    </div>
+
+                    <div class="forms ml-auto">
+                        <a href="login.php" class="btn"><span class="fa fa-user-circle-o"></span> Log In</a>
+                        <a href="register_new_customer.php" class="btn"><span class="fa fa-pencil-square-o"></span>
+                            Register</a>
+                    </div>
+                </div>
+                <div class="nav-top-wthree">
+                    <nav>
+                        <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
+                        <input type="checkbox" id="drop" />
+                        <ul class="menu">
+                            <li class="active">
+                                <a href="index.php">Home</a>
+                            </li>
+                            <li><a href="shop.php">Shop</a></li>
+                            <li><a href="employee_dashboard.php">Return to Dashboard</a></li>
+                        </ul>
+                    </nav>
+                    <!-- //nav -->
+                    <div class="search-form ml-auto">
+                        <div class="form-w3layouts-grid">
+                            
+
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+
+    <section class="banner-bottom py-5">
+        <div class="container">
+            <div class="content-grid">
+                <div class="text-center icon">
+                    <span>
+                        <h2>Create Employee File</h2>
+                    </span>
+                </div>
+                <div class="content-bottom">
+                    <form action="add_employee.php" onsubmit="return VALIDATION()" method="post" name="employee_form">
+                        <div class="content-input-field">
+                            <table>
+                               
+                                <tr>
+                                    <td><label for="emp_name">Name:</label></td>
+                                    <td><input type="text" name="emp_name" id="emp_name" size=30></td>
+                                </tr>
+
+                                <tr>
+                                    <td><label for="emp_phone">Phone Number:</label></td>
+                                    <td><input type="text" name="emp_phone" id="emp_phone" size=15> </td>
+                                </tr>
+
+                                <tr>
+                                    <td><label for="emp_email">Email:</label></td>
+                                    <td><input type="email" required name="emp_email" id="emp_email" size=30> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label for="emp_password">Password:</label></td>
+                                    <td><input type="password" required name="emp_password" id="emp_password" size=30> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td> 
+                                        <button type="submit" class="btn">Submit</button></td>
+                                        <td><button type="reset" class="btn">Reset</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

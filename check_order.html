@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Order</title>
+</head>
+<body>
+    
+    <form action="order_check.php" method="POST">
+        <table>
+          <caption >Enter Order ID</caption> 
+          <tr>
+            <td><label for="order_id">Order Number:</label></td>
+            <td><input type="text" name="order_id" id="order_id"> <br><br></td>
+        </tr>
+          
+          <tr>
+            <td colspan="2">
+                <input type="submit" name="Submit" value="Go">
+           </td>
+          </tr>
+        </table>
+      </form>
+<br><br>
+<form action="schedule.php" method="POST">
+    <table>
+      <caption >Select Date</caption> 
+      <tr>
+        <td><label for="date">Date:</label></td>
+        <td><input type="date" name="date" id="date"> <br><br></td>
+    </tr>
+      
+      <tr>
+        <td colspan="2">
+            <input type="submit" name="Submit" value="Go">
+       </td>
+      </tr>
+    </table>
+  </form>
+      
+</body>
+</html>
